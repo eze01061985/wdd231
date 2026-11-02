@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet Jose Ezequiel Flores Menendez and explore his Web and Computer Programming certificate courses and WDD 231 projects.">
+  <meta name="author" content="Jose Ezequiel Flores Menendez">
+  <title>Home | Jose Ezequiel Flores Menendez | WDD 231</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Code logo" width="24" height="24">
+    <span>Jose Ezequiel Flores Menendez</span>
+    <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-bar"></button>
+  </header>
+  <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+    <ul>
+      <li class="current"><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="chamber/index.html">Chamber</a></li>
+      <li><a href="final/index.html">Final</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Home</h1>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>My name is Jose Ezequiel Flores Menendez, and I am from Jujuy, Argentina. I am married and have two children. I enjoy strategy video games and working out.</p>
+      <p>I am a software developer studying web development. I enjoy combining programming with creativity, and I have started experimenting with small indie games. In this course, I want to improve my skills in JavaScript and build accessible, responsive websites.</p>
+    </section>
+    <section class="photo">
+      <h2>Student Photo</h2>
+      <img src="images/profile.jpg" alt="Jose Ezequiel Flores Menendez" width="160" height="160">
+    </section>
+    <section class="certificate">
+      <h2>Web Certificate Courses</h2>
+      <div class="filters" aria-label="Filter courses">
+        <button type="button" data-subject="All" aria-pressed="true">All</button>
+        <button type="button" data-subject="CSE" aria-pressed="false">CSE</button>
+        <button type="button" data-subject="WDD" aria-pressed="false">WDD</button>
+      </div>
+      <div id="course-list"></div>
+      <p id="total-credits" aria-live="polite"></p>
+      <p class="course-key">✓ Completed course</p>
+    </section>
+  </main>
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/eze01061985/wdd231"><img src="images/github.svg" alt="GitHub course repository" width="32" height="32"></a>
+      <a href="https://www.linkedin.com/in/jose-ezequiel-flores-menendez/"><img src="images/linkedin.svg" alt="LinkedIn profile" width="32" height="32"></a>
+      <a href="https://www.facebook.com/joseezequiel.floresmenendez"><img src="images/facebook.svg" alt="Facebook profile" width="32" height="32"></a>
+    </div>
+    <p><span id="currentyear"></span> Jose Ezequiel Flores Menendez | Jujuy, Argentina</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
