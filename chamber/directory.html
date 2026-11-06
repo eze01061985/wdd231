@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Jujuy Chamber of Commerce member directory. Find local business services and view our sample members in a grid or list.">
+  <meta name="author" content="Jose Ezequiel Flores Menendez">
+  <meta property="og:title" content="Business Directory | Jujuy Chamber of Commerce">
+  <meta property="og:description" content="Discover businesses and services in San Salvador de Jujuy. Explore the member directory of this student chamber project.">
+  <meta property="og:image" content="https://eze01061985.github.io/wdd231/chamber/images/social-preview.png">
+  <meta property="og:url" content="https://eze01061985.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+  <title>Business Directory | Jujuy Chamber of Commerce</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="directory.html">
+      <img src="images/logo.svg" alt="" width="48" height="48">
+      <span>Jujuy<span class="brand-subtitle">Chamber of Commerce</span></span>
+    </a>
+    <button id="menu-button" aria-label="Toggle navigation" aria-controls="navigation" aria-expanded="false"></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Business Directory</h1>
+    <p>Explore the services offered by our members in San Salvador de Jujuy.</p>
+    <p class="notice">Student project: these businesses and contact details are fictional. Website links lead to an example page.</p>
+    <div class="view-buttons" role="group" aria-label="Directory view">
+      <button id="grid-button" type="button" aria-pressed="true">Grid</button>
+      <button id="list-button" type="button" aria-pressed="false">List</button>
+    </div>
+    <p id="status" role="status">Loading members...</p>
+    <div id="members" class="grid"></div>
+  </main>
+  <footer>
+    <div>
+      <strong>Jujuy Chamber of Commerce</strong>
+      <p>100 Example Street<br>San Salvador de Jujuy, Argentina</p>
+      <p>info@jujuy-chamber.example<br>+54 388 000-0000</p>
+      <p>Fictional contact information for this student project.</p>
+    </div>
+    <div class="social-links">
+      <a href="https://github.com/eze01061985/wdd231"><img src="images/github.svg" alt="GitHub course repository" width="32" height="32"></a>
+      <a href="https://www.linkedin.com/in/jose-ezequiel-flores-menendez/"><img src="images/linkedin.svg" alt="Jose's LinkedIn profile" width="32" height="32"></a>
+      <a href="https://www.facebook.com/joseezequiel.floresmenendez"><img src="images/facebook.svg" alt="Jose's Facebook profile" width="32" height="32"></a>
+    </div>
+    <div>
+      <p>WDD 231 Class Project<br>Jose Ezequiel Flores Menendez</p>
+      <p>&copy; <span id="currentyear"></span> Jujuy Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "familyName": "Garcia",
+  "moveInDate": "2026-10-15",
+  "numberOfPeople": 4,
+  "visitedByBishopric": false,
+  "familyMembers": [
+    {
+      "name": "Daniel Garcia",
+      "gender": "Male",
+      "birthdate": "1989-04-12"
+    },
+    {
+      "name": "Laura Garcia",
+      "gender": "Female",
+      "birthdate": "1991-08-23"
+    },
+    {
+      "name": "Sofia Garcia",
+      "gender": "Female",
+      "birthdate": "2015-02-06"
+    },
+    {
+      "name": "Lucas Garcia",
+      "gender": "Male",
+      "birthdate": "2020-11-18"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Quebrada Coffee",
+    "address": "101 Example Street, San Salvador de Jujuy",
+    "phone": "+54 388 000-0101",
+    "website": "https://example.com/?business=quebrada-coffee",
+    "image": "coffee.svg",
+    "membershipLevel": 3,
+    "description": "Coffee, baked goods, and a place to meet."
+  },
+  {
+    "name": "Puna Web Studio",
+    "address": "202 Example Street, San Salvador de Jujuy",
+    "phone": "+54 388 000-0202",
+    "website": "https://example.com/?business=puna-web",
+    "image": "web.svg",
+    "membershipLevel": 2,
+    "description": "Simple websites for local businesses."
+  },
+  {
+    "name": "Cerro Norte Tours",
+    "address": "303 Example Street, San Salvador de Jujuy",
+    "phone": "+54 388 000-0303",
+    "website": "https://example.com/?business=cerro-norte",
+    "image": "tours.svg",
+    "membershipLevel": 3,
+    "description": "Guided walks and regional day trips."
+  },
+  {
+    "name": "Valley Books",
+    "address": "404 Example Street, San Salvador de Jujuy",
+    "phone": "+54 388 000-0404",
+    "website": "https://example.com/?business=valley-books",
+    "image": "books.svg",
+    "membershipLevel": 1,
+    "description": "Books and school supplies for every reader."
+  },
+  {
+    "name": "Andes Bicycle Shop",
+    "address": "505 Example Street, San Salvador de Jujuy",
+    "phone": "+54 388 000-0505",
+    "website": "https://example.com/?business=andes-bicycle",
+    "image": "bicycle.svg",
+    "membershipLevel": 2,
+    "description": "Bicycle repairs, accessories, and rentals."
+  },
+  {
+    "name": "Yungas Garden",
+    "address": "606 Example Street, San Salvador de Jujuy",
+    "phone": "+54 388 000-0606",
+    "website": "https://example.com/?business=yungas-garden",
+    "image": "garden.svg",
+    "membershipLevel": 1,
+    "description": "Plants and supplies for home gardens."
+  },
+  {
+    "name": "Northern Loom",
+    "address": "707 Example Street, San Salvador de Jujuy",
+    "phone": "+54 388 000-0707",
+    "website": "https://example.com/?business=northern-loom",
+    "image": "loom.svg",
+    "membershipLevel": 2,
+    "description": "Handmade textiles and gifts for the home."
+  }
+]
