@@ -39,3 +39,20 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+@media screen and (min-width: 900px) {
+  .hero {
+    position: relative;
+  }
+
+  .hero-message {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    max-width: 440px;
+  }
+
+  .home-info {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}

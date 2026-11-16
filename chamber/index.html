@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Connect with businesses in San Salvador de Jujuy. Explore chamber events, local weather, and featured members.">
+  <meta name="author" content="Jose Ezequiel Flores Menendez">
+  <meta property="og:title" content="Home | Jujuy Chamber of Commerce">
+  <meta property="og:description" content="Build local connections with the Jujuy Chamber of Commerce. Find events and meet our featured members.">
+  <meta property="og:image" content="https://eze01061985.github.io/wdd231/chamber/images/social-preview.png">
+  <meta property="og:url" content="https://eze01061985.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+  <title>Home | Jujuy Chamber of Commerce</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+  <script type="module" src="scripts/weather.mjs"></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="" width="48" height="48">
+      <span>Jujuy<span class="brand-subtitle">Chamber of Commerce</span></span>
+    </a>
+    <button id="menu-button" aria-label="Toggle navigation" aria-controls="navigation" aria-expanded="false"></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Grow Together in Jujuy</h1>
+    <div class="hero">
+      <img src="images/jujuy-hero.jpg" alt="San Salvador de Jujuy surrounded by green hills and distant mountains" width="960" height="442" fetchpriority="high">
+      <div class="hero-message">
+        <h2>Local businesses. Stronger connections.</h2>
+        <p>Meet other business owners and help our community grow.</p>
+        <a class="join-link" href="join.html">Join the Chamber</a>
+      </div>
+    </div>
+    <p class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_de_San_Salvador_de_Jujuy.jpg">Coquena, Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Resized thumbnail.</p>
+    <div class="home-info">
+      <section class="home-panel">
+        <h2>Upcoming Events</h2>
+        <article>
+          <h3>Small Business Coffee Morning</h3>
+          <p><time datetime="2026-11-21T09:00">November 21, 2026 · 9:00 a.m.</time></p>
+          <p>Meet at Quebrada Coffee to introduce your business and exchange ideas with other members.</p>
+        </article>
+        <article>
+          <h3>Your First Business Website</h3>
+          <p><time datetime="2026-11-28T10:00">November 28, 2026 · 10:00 a.m.</time></p>
+          <p>Puna Web Studio will host a beginner workshop on planning a useful website for a local shop.</p>
+        </article>
+        <p class="notice">These are example events for this student project. All times are local to Jujuy.</p>
+      </section>
+      <section class="home-panel">
+        <h2>Current Weather</h2>
+        <p>San Salvador de Jujuy, Argentina</p>
+        <div id="current-weather" role="status">Loading current weather...</div>
+        <p class="notice">Weather data: <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
+      </section>
+      <section class="home-panel">
+        <h2>Three-Day Forecast</h2>
+        <p>Temperature at noon, local time.</p>
+        <div id="forecast" role="status">Loading forecast...</div>
+      </section>
+    </div>
+    <section aria-labelledby="spotlight-heading">
+      <h2 id="spotlight-heading">Member Spotlights</h2>
+      <p>Meet a few of our Silver and Gold members.</p>
+      <p class="notice">Student project: businesses and contact details are fictional. Website links lead to an example page.</p>
+      <p id="spotlight-status" role="status">Loading featured members...</p>
+      <div id="spotlights" class="grid"></div>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <strong>Jujuy Chamber of Commerce</strong>
+      <p>100 Example Street<br>San Salvador de Jujuy, Argentina</p>
+      <p>info@jujuy-chamber.example<br>+54 388 000-0000</p>
+      <p>Fictional contact information for this student project.</p>
+    </div>
+    <div class="social-links">
+      <a href="https://github.com/eze01061985/wdd231"><img src="images/github.svg" alt="GitHub course repository" width="32" height="32"></a>
+      <a href="https://www.linkedin.com/in/jose-ezequiel-flores-menendez/"><img src="images/linkedin.svg" alt="Jose's LinkedIn profile" width="32" height="32"></a>
+      <a href="https://www.facebook.com/joseezequiel.floresmenendez"><img src="images/facebook.svg" alt="Jose's Facebook profile" width="32" height="32"></a>
+    </div>
+    <div>
+      <p>WDD 231 Class Project<br>Jose Ezequiel Flores Menendez</p>
+      <p>&copy; <span id="currentyear"></span> Jujuy Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>
+

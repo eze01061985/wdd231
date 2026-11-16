@@ -1,3 +1,18 @@
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  color: #24324a;
+  z-index: 1;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid #24324a;
+}
+
 body {
   font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.6;
