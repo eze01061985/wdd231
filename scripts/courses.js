@@ -80,15 +80,47 @@ const courses = [
 const courseList = document.querySelector('#course-list');
 const totalCredits = document.querySelector('#total-credits');
 const filterButtons = document.querySelectorAll('.filters button');
+const courseDetails = document.querySelector('#course-details');
+
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = `
+    <button id="close-modal" type="button" aria-label="Close course details">✕</button>
+    <h2 id="course-title">${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits:</strong> ${course.credits}</p>
+    <p><strong>Certificate:</strong> ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
+  `;
+  courseDetails.showModal();
+  courseDetails.querySelector('#close-modal').addEventListener('click', () => {
+    courseDetails.close();
+  });
+}
+
+courseDetails.addEventListener('click', (event) => {
+  const bounds = courseDetails.getBoundingClientRect();
+  if (event.target === courseDetails &&
+      (event.clientX < bounds.left || event.clientX > bounds.right ||
+       event.clientY < bounds.top || event.clientY > bounds.bottom)) {
+    courseDetails.close();
+  }
+});
 
 function displayCourses(courseArray) {
   courseList.innerHTML = '';
   courseArray.forEach(course => {
-    courseList.innerHTML += `
-      <div class="course ${course.completed ? 'completed' : ''}">
-        <h3>${course.completed ? '✓ ' : ''}${course.subject} ${course.number}</h3>
-        <p>${course.title}</p>
-      </div>`;
+    const courseCard = document.createElement('button');
+    courseCard.type = 'button';
+    courseCard.className = `course ${course.completed ? 'completed' : ''}`;
+    courseCard.setAttribute('aria-haspopup', 'dialog');
+    courseCard.innerHTML = `
+      <span class="course-code">${course.completed ? '✓ ' : ''}${course.subject} ${course.number}</span>
+      <span class="course-name">${course.title}</span>`;
+    courseCard.addEventListener('click', () => {
+      displayCourseDetails(course);
+    });
+    courseList.appendChild(courseCard);
   });
   const credits = courseArray.reduce((total, course) => total + course.credits, 0);
   totalCredits.textContent = `Total credits for the courses shown: ${credits}`;

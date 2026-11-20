@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply to the Jujuy Chamber of Commerce. Compare four membership levels, explore their benefits, and complete our membership form.">
+  <meta name="author" content="Jose Ezequiel Flores Menendez">
+  <meta property="og:title" content="Join | Jujuy Chamber of Commerce">
+  <meta property="og:description" content="Apply to the Jujuy Chamber of Commerce. Compare four membership levels, explore their benefits, and complete our membership form.">
+  <meta property="og:image" content="https://eze01061985.github.io/wdd231/chamber/images/social-preview.png">
+  <meta property="og:url" content="https://eze01061985.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+  <title>Join | Jujuy Chamber of Commerce</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="" width="48" height="48">
+      <span>Jujuy<span class="brand-subtitle">Chamber of Commerce</span></span>
+    </a>
+    <button id="menu-button" aria-label="Toggle navigation" aria-controls="navigation" aria-expanded="false"></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" aria-current="page">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Join the Jujuy Chamber</h1>
+    <p>Connect with local businesses and choose the membership that fits your organization.</p>
+    <p class="notice">Student project: use fictional information. This form does not create a real membership or collect payment.</p>
+    <div class="join-layout">
+      <form class="join-form" method="get" action="thankyou.html">
+        <h2>Membership Application</h2>
+        <p>Fields marked * are required.</p>
+        <label>First name *<input type="text" name="first" title="Your first name" autocomplete="given-name" required></label>
+        <label>Last name *<input type="text" name="last" title="Your last name" autocomplete="family-name" required></label>
+        <label>Organizational title<input type="text" name="organization-title" title="At least seven letters, spaces, or hyphens" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}" aria-describedby="title-help"></label>
+        <p id="title-help" class="notice">Optional. Use at least seven characters: letters, spaces, or hyphens.</p>
+        <label>Email *<input type="email" name="email" title="Your email address" autocomplete="email" placeholder="name@example.com" required></label>
+        <label>Mobile phone *<input type="tel" name="phone" title="Your mobile phone number" autocomplete="tel" required></label>
+        <label>Business or organization name *<input type="text" name="organization" title="Your business or organization name" autocomplete="organization" required></label>
+        <label>Membership level *<select name="membership" title="Choose your membership level" required>
+          <option value="" disabled selected>Select a membership</option>
+          <option value="np">NP Membership — Free</option>
+          <option value="bronze">Bronze Membership — ARS 30,000/year</option>
+          <option value="silver">Silver Membership — ARS 60,000/year</option>
+          <option value="gold">Gold Membership — ARS 100,000/year</option>
+        </select></label>
+        <label>Business description<textarea name="description" title="Describe your business or organization" rows="4"></textarea></label>
+        <input type="hidden" name="timestamp" id="timestamp">
+        <input type="submit" value="Submit Membership Application">
+      </form>
+      <section class="membership-options" aria-labelledby="membership-heading">
+        <h2 id="membership-heading">Membership Levels</h2>
+        <article class="membership-card">
+          <h3>NP Membership</h3>
+          <p>Free</p>
+          <a href="#np-details" data-dialog="np-details" aria-haspopup="dialog">View NP Membership benefits</a>
+        </article>
+        <article class="membership-card">
+          <h3>Bronze Membership</h3>
+          <p>ARS 30,000 per year</p>
+          <a href="#bronze-details" data-dialog="bronze-details" aria-haspopup="dialog">View Bronze Membership benefits</a>
+        </article>
+        <article class="membership-card">
+          <h3>Silver Membership</h3>
+          <p>ARS 60,000 per year</p>
+          <a href="#silver-details" data-dialog="silver-details" aria-haspopup="dialog">View Silver Membership benefits</a>
+        </article>
+        <article class="membership-card">
+          <h3>Gold Membership</h3>
+          <p>ARS 100,000 per year</p>
+          <a href="#gold-details" data-dialog="gold-details" aria-haspopup="dialog">View Gold Membership benefits</a>
+        </article>
+        <p class="notice">Fees and benefits are examples for this student project.</p>
+      </section>
+    </div>
+    <dialog id="np-details" class="membership-dialog" aria-labelledby="np-title">
+      <h2 id="np-title">NP Membership</h2>
+      <p><strong>Free</strong></p>
+      <p>For nonprofit organizations. Includes a directory listing, community event invitations, and one networking meeting each month.</p>
+      <button type="button" class="close-dialog">Close</button>
+    </dialog>
+    <dialog id="bronze-details" class="membership-dialog" aria-labelledby="bronze-title">
+      <h2 id="bronze-title">Bronze Membership</h2>
+      <p><strong>ARS 30,000 per year</strong></p>
+      <p>Includes a directory listing, monthly networking meetings, two training workshops per year, and a 5% discount on chamber events.</p>
+      <button type="button" class="close-dialog">Close</button>
+    </dialog>
+    <dialog id="silver-details" class="membership-dialog" aria-labelledby="silver-title">
+      <h2 id="silver-title">Silver Membership</h2>
+      <p><strong>ARS 60,000 per year</strong></p>
+      <p>Includes all Bronze benefits, four training workshops per year, eligibility for rotating home page spotlights, and a 10% discount on chamber events.</p>
+      <button type="button" class="close-dialog">Close</button>
+    </dialog>
+    <dialog id="gold-details" class="membership-dialog" aria-labelledby="gold-title">
+      <h2 id="gold-title">Gold Membership</h2>
+      <p><strong>ARS 100,000 per year</strong></p>
+      <p>Includes all Silver benefits, monthly training workshops, one dedicated newsletter feature each quarter, and a 20% discount on chamber events.</p>
+      <button type="button" class="close-dialog">Close</button>
+    </dialog>
+  </main>
+  <footer>
+    <div>
+      <strong>Jujuy Chamber of Commerce</strong>
+      <p>100 Example Street<br>San Salvador de Jujuy, Argentina</p>
+      <p>info@jujuy-chamber.example<br>+54 388 000-0000</p>
+      <p>Fictional contact information for this student project.</p>
+    </div>
+    <div class="social-links">
+      <a href="https://github.com/eze01061985/wdd231"><img src="images/github.svg" alt="GitHub course repository" width="32" height="32"></a>
+      <a href="https://www.linkedin.com/in/jose-ezequiel-flores-menendez/"><img src="images/linkedin.svg" alt="Jose's LinkedIn profile" width="32" height="32"></a>
+      <a href="https://www.facebook.com/joseezequiel.floresmenendez"><img src="images/facebook.svg" alt="Jose's Facebook profile" width="32" height="32"></a>
+    </div>
+    <div>
+      <p>WDD 231 Class Project<br>Jose Ezequiel Flores Menendez</p>
+      <p>&copy; <span id="currentyear"></span> Jujuy Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>

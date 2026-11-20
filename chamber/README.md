@@ -6,7 +6,7 @@ The directory uses fictional businesses and contact information. Each website li
 
 Colors: dark green (#174c3c), gold (#f2d28a), and a light background (#faf8f3). Font: Roboto from Google Fonts, with Arial as a fallback.
 
-Home and Directory are available. Join and Discover are reserved for upcoming assignments.
+Home, Directory, and Join are available. Join includes a membership form, four benefit dialogs, and an application confirmation page. Discover is reserved for an upcoming assignment.
 
 Business icons and the mountain logo were created for this project. Social icons come from Bootstrap Icons; the license is in images/bootstrap-icons-LICENSE.txt.
 

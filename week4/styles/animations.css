@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  background-color: #f4f5f8;
+  color: #292929;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1, h2 {
+  color: #24324a;
+}
+
+section {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #24324a;
+  color: white;
+}
+
+.loader, .loader-t {
+  position: relative;
+  margin: 2rem;
+  width: 50px;
+  height: 50px;
+  border: 5px solid;
+  border-color: #999 transparent #999 transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 1rem rgb(0 0 255 / 40%);
+}
+
+.loader::after, .loader-t::after {
+  content: '⚙️';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.loader {
+  animation: spin 1.5s linear infinite;
+}
+
+.loader::after {
+  transform: translate(-50%, -50%);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.25); }
+}
+
+#pause-animation:checked ~ .loader,
+#pause-animation:checked ~ .loader::after {
+  animation-play-state: paused;
+}
+
+.loader-t {
+  transition: transform 1.5s linear;
+}
+
+.loader-t::after {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 1.5s ease-in-out;
+  font-size: 2rem;
+}
+
+.loader-t:hover, .loader-t:focus {
+  transform: rotate(360deg);
+}
+
+.loader-t:hover::after, .loader-t:focus::after {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.loader-t:focus-visible {
+  outline: 3px solid #24324a;
+  outline-offset: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader, .loader::after, .loader-t, .loader-t::after {
+    animation: none;
+    transition: none;
+  }
+}

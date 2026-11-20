@@ -56,3 +56,10 @@
     grid-template-columns: 2fr 1fr 1fr;
   }
 }
+
+@media screen and (min-width: 800px) {
+  .join-layout {
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+  }
+}
