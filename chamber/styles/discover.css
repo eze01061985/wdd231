@@ -1,0 +1,126 @@
+.visit-message {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #f2d28a;
+  border-radius: 6px;
+}
+
+.discover-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.place-card {
+  display: grid;
+  grid-template-areas: 'title' 'photo' 'address' 'description' 'button';
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #bcc8c1;
+  border-radius: 6px;
+}
+
+.place-card h2 {
+  grid-area: title;
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.place-card figure {
+  grid-area: photo;
+  margin: 0;
+}
+
+.place-card img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.place-card address {
+  grid-area: address;
+  font-style: normal;
+}
+
+.place-card p {
+  grid-area: description;
+  margin: 0;
+}
+
+.place-card button {
+  grid-area: button;
+  align-self: end;
+}
+
+.place-card button,
+#close-place {
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 4px;
+  background-color: #174c3c;
+  color: white;
+  cursor: pointer;
+}
+
+.place-card button:hover,
+#close-place:hover {
+  background-color: #10382c;
+}
+
+.place-card button:focus-visible,
+#close-place:focus-visible {
+  outline: 3px solid #174c3c;
+  outline-offset: 3px;
+}
+
+.discover-sources {
+  margin-top: 2rem;
+}
+
+#place-dialog {
+  width: 90%;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow: auto;
+  padding: 1.5rem;
+  border: 1px solid #174c3c;
+  border-radius: 6px;
+  color: #20332e;
+  background-color: white;
+}
+
+#place-dialog::backdrop {
+  background-color: rgb(0 0 0 / 60%);
+}
+
+@media screen and (min-width: 641px) {
+  .place-card {
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 'photo title' 'photo address' 'photo description' 'button button';
+  }
+
+  .place-card figure {
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 641px) and (hover: hover) {
+  .place-card img:hover {
+    filter: brightness(1.12);
+    box-shadow: 0 4px 10px #20332e;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .place-card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'title title' 'photo address' 'description description' 'button button';
+  }
+}

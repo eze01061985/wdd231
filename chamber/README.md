@@ -6,7 +6,7 @@ The directory uses fictional businesses and contact information. Each website li
 
 Colors: dark green (#174c3c), gold (#f2d28a), and a light background (#faf8f3). Font: Roboto from Google Fonts, with Arial as a fallback.
 
-Home, Directory, and Join are available. Join includes a membership form, four benefit dialogs, and an application confirmation page. Discover is reserved for an upcoming assignment.
+Home, Directory, and Join are available. Join includes a membership form, four benefit dialogs, and an application confirmation page. Discover includes eight historic-center places, imported from data/places.mjs, with responsive grid areas and a last-visit message. Photos come from the municipal tourism website and are credited on the page.
 
 Business icons and the mountain logo were created for this project. Social icons come from Bootstrap Icons; the license is in images/bootstrap-icons-LICENSE.txt.
 
